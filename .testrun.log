@@ -1,0 +1,14 @@
+
+> express-mongo-jwt-api@1.0.0 test
+> jest --runInBand
+
+(node:1042160) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+PASS tests/auth.test.ts (18.406 s)
+PASS tests/items.test.ts (5.507 s)
+
+Test Suites: 2 passed, 2 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        24.579 s, estimated 188 s
+Ran all test suites.

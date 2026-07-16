@@ -9,7 +9,7 @@ export interface UserDoc {
 
 const userSchema = new Schema<UserDoc>({
   email: { type: String, required: true, unique: true, lowercase: true, trim: true },
-  passwordHash: { type: String, required: true },
+  passwordHash: { type: String, required: true, select: false },
   createdAt: { type: Date, default: Date.now },
 });
 

@@ -30,7 +30,8 @@ export async function login(req: Request, res: Response, next: NextFunction) {
   try {
     const { email, password } = req.body as LoginInput;
 
-    const user = await User.findOne({ email });
+    // passwordHash is select:false on the model, so pull it in explicitly for the compare.
+    const user = await User.findOne({ email }).select("+passwordHash");
     if (!user) {
       throw new AppError(401, "Invalid email or password");
     }
